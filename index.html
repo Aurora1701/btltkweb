@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thư Viện Ngàn Sao | Aurora's Book Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
+</head>
+<body>
+
+    <header class="bg-light border-bottom">
+        <div class="container py-2">
+            <div class="d-flex justify-content-between align-items-center">
+                <ul class="list-inline mb-0 text-muted small">
+                    <li class="list-inline-item"><i class="fa fa-envelope me-1"></i> buyabook@aurora.com</li>
+                    <li class="list-inline-item d-none d-md-inline">| Miễn phí vận chuyển cho đơn hàng từ $25</li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a href="#" class="text-dark me-3 small"><i class="fa fa-user me-1"></i> Đăng nhập</a>
+                    <div class="dropdown">
+                        <a class="text-dark dropdown-toggle small" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-globe me-1"></i> Ngôn ngữ
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item small" href="#">Tiếng Việt</a></li>
+                            <li><a class="dropdown-item small" href="#">English</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">AURORA BOOKS</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="shop-grid.html">Cửa hàng</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                                Trang
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="shop-details.html">Chi tiết sản phẩm</a></li>
+                                <li><a class="dropdown-item" href="shopping-cart.html">Giỏ hàng</a></li>
+                                <li><a class="dropdown-item" href="checkout.html">Thanh toán</a></li>
+                                <li><a class="dropdown-item" href="blog-details.html">Chi tiết Blog</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Liên hệ</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <a href="#" class="nav-link text-white me-3" title="Yêu thích"><i class="fa fa-heart fa-lg"></i> <span class="badge bg-danger">2</span></a>
+                        <a href="shopping-cart.html" class="nav-link text-white" title="Giỏ hàng"><i class="fa fa-shopping-cart fa-lg"></i> <span class="badge bg-danger">2</span></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="bg-white p-3 shadow-sm rounded">
+                        <h5 class="mb-3 text-white bg-success p-2 rounded-top">
+                            <i class="fa fa-bars me-2"></i> Danh mục sách
+                        </h5>
+                        <ul class="list-unstyled mb-0">
+                            <li><a href="#" class="d-block py-1 text-dark">Sci-Fi & Viễn tưởng</a></li>
+                            <li><a href="#" class="d-block py-1 text-dark">Trinh thám</a></li>
+                            <li><a href="#" class="d-block py-1 text-dark">Văn học & Tiểu thuyết</a></li>
+                            <li><a href="#" class="d-block py-1 text-dark">Tiểu sử & Hồi ký</a></li>
+                            <li><a href="#" class="d-block py-1 text-dark">Lịch sử</a></li>
+                            <li><a href="#" class="d-block py-1 text-dark">Self-Help & Truyền cảm hứng</a></li>
+                            <li><a href="#" class="d-block py-1 text-dark">Kinh doanh & Tài chính</a></li>
+                            <li><a href="#" class="d-block py-1 text-dark">Young Adult </a></li>
+                            <li><a href="#" class="d-block py-1 text-dark">Khoa học & Công nghệ</a></li>
+                            <li><a href="#" class="d-block py-1 text-dark">Truyện tranh</a></li>
+                            <li><a href="#" class="d-block py-1 text-dark">Ẩm thực</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-9">
+                    <div class="input-group mb-4">
+                        <select class="form-select" style="max-width: 150px;">
+                            <option selected>Tất cả</option>
+                            <option value="1">Tiểu thuyết</option>
+                            <option value="2">Lịch sử</option>
+                        </select>
+                        <input type="text" class="form-control" placeholder="Tìm kiếm sách...">
+                        <button class="btn btn-warning text-white" type="button">TÌM KIẾM</button>
+                    </div>
+
+                    <div class="p-5 text-dark rounded shadow-sm" style="background-image: url('img/Banner1.png'); background-size: cover; background-position: center;">
+                        <span class="badge bg-secondary mb-2">SÁCH MỚI</span>
+                        <h1 class="display-5 fw-bold">GIẢM 50% <br> TẤT CẢ SÁCH</h1>
+                        <p class="lead mb-4">Giao hàng miễn phí có sẵn.</p>
+                        <a href="#" class="btn btn-warning btn-lg">MUA NGAY</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Khám phá các loại sách</h2>
+            <div class="row g-3">
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="card text-center shadow-sm">
+                        <img src="img/sachTreEm1.png" class="card-img-top" alt="Vintage Books">
+                        <div class="card-body p-2">
+                            <h6 class="card-title mb-0"><a href="#" class="text-dark text-decoration-none">Sách trẻ em</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="card text-center shadow-sm">
+                        <img src="img/nhaGiaKim.png" class="card-img-top" alt="Novel">
+                        <div class="card-body p-2">
+                            <h6 class="card-title mb-0"><a href="#" class="text-dark text-decoration-none">Tiểu thuyết</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="card text-center shadow-sm">
+                        <img src="img/tuDien1.png" class="card-img-top" alt="Dictionary">
+                        <div class="card-body p-2">
+                            <h6 class="card-title mb-0"><a href="#" class="text-dark text-decoration-none">Từ điển</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="card text-center shadow-sm">
+                        <img src="img/manga1.png" class="card-img-top" alt="Manga">
+                        <div class="card-body p-2">
+                            <h6 class="card-title mb-0"><a href="#" class="text-dark text-decoration-none">Truyện tranh (Manga)</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="card text-center shadow-sm">
+                        <img src="img/sachTruyenCamHung1.png" class="card-img-top" alt="Inspirational Books">
+                        <div class="card-body p-2">
+                            <h6 class="card-title mb-0"><a href="#" class="text-dark text-decoration-none">Truyền cảm hứng</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="card text-center shadow-sm">
+                        <img src="img/thoCa1.png" class="card-img-top" alt="Poetry">
+                        <div class="card-body p-2">
+                            <h6 class="card-title mb-0"><a href="#" class="text-dark text-decoration-none">Thơ ca</a></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Sách nổi bật</h2>
+            
+            <ul class="nav nav-pills justify-content-center mb-4" id="book-filter-tabs">
+                <li class="nav-item"><a class="nav-link active filter-btn" data-filter="all" href="#">Tất cả</a></li>
+                <li class="nav-item"><a class="nav-link filter-btn" data-filter="scifi" href="#">Sci-Fi</a></li>
+                <li class="nav-item"><a class="nav-link filter-btn" data-filter="history" href="#">Lịch sử</a></li>
+                <li class="nav-item"><a class="nav-link filter-btn" data-filter="novel" href="#">Tiểu thuyết</a></li>
+            </ul>
+
+            <div class="row g-4" id="featured-books-list">
+                
+                <div class="col-lg-3 col-md-4 col-sm-6 single-book history all">
+                    <div class="card h-100 shadow-sm text-center">
+                        <img src="img/lichSuVanVat.png" class="card-img-top" alt="Sách 1">
+                        <div class="card-body p-3">
+                            <h6 class="card-title mb-1"><a href="#" class="text-dark text-decoration-none">Lịch sử vạn vật</a></h6>
+                            <p class="card-text fw-bold text-danger">$30.00</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 p-2">
+                            <a href="#" class="btn btn-outline-secondary btn-sm me-2"><i class="fa fa-heart"></i></a>
+                            <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-shopping-cart me-1"></i> Mua</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 col-sm-6 single-book scifi all">
+                    <div class="card h-100 shadow-sm text-center">
+                        <img src="img/nguoiVeTuSaoHoa.png" class="card-img-top" alt="Sách 2">
+                        <div class="card-body p-3">
+                            <h6 class="card-title mb-1"><a href="#" class="text-dark text-decoration-none">Người về từ sao hỏa</a></h6>
+                            <p class="card-text fw-bold text-danger">$35.00</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 p-2">
+                            <a href="#" class="btn btn-outline-secondary btn-sm me-2"><i class="fa fa-heart"></i></a>
+                            <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-shopping-cart me-1"></i> Mua</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 col-sm-6 single-book novel all">
+                    <div class="card h-100 shadow-sm text-center">
+                        <img src="img/nhaGiaKim.png" class="card-img-top" alt="Sách 3">
+                        <div class="card-body p-3">
+                            <h6 class="card-title mb-1"><a href="#" class="text-dark text-decoration-none">Nhà giả kim</a></h6>
+                            <p class="card-text fw-bold text-danger">$25.00</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 p-2">
+                            <a href="#" class="btn btn-outline-secondary btn-sm me-2"><i class="fa fa-heart"></i></a>
+                            <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-shopping-cart me-1"></i> Mua</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 col-sm-6 single-book scifi all">
+                    <div class="card h-100 shadow-sm text-center">
+                        <img src="img/Sci-fi1.png" class="card-img-top" alt="Sách 4">
+                        <div class="card-body p-3">
+                            <h6 class="card-title mb-1"><a href="#" class="text-dark text-decoration-none">Chó săn miền bom đạn</a></h6>
+                            <p class="card-text fw-bold text-danger">$40.00</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 p-2">
+                            <a href="#" class="btn btn-outline-secondary btn-sm me-2"><i class="fa fa-heart"></i></a>
+                            <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-shopping-cart me-1"></i> Mua</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 single-book novel all">
+                    <div class="card h-100 shadow-sm text-center">
+                        <img src="img/tieuThuyet2.png" class="card-img-top" alt="Sách 5">
+                        <div class="card-body p-3">
+                            <h6 class="card-title mb-1"><a href="#" class="text-dark text-decoration-none">Rừng Na Uy</a></h6>
+                            <p class="card-text fw-bold text-danger">$32.00</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 p-2">
+                            <a href="#" class="btn btn-outline-secondary btn-sm me-2"><i class="fa fa-heart"></i></a>
+                            <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-shopping-cart me-1"></i> Mua</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 single-book history all">
+                    <div class="card h-100 shadow-sm text-center">
+                        <img src="img/lichSu1.png" class="card-img-top" alt="Sách 6">
+                        <div class="card-body p-3">
+                            <h6 class="card-title mb-1"><a href="#" class="text-dark text-decoration-none">Lịch sử sách</a></h6>
+                            <p class="card-text fw-bold text-danger">$50.00</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 p-2">
+                            <a href="#" class="btn btn-outline-secondary btn-sm me-2"><i class="fa fa-heart"></i></a>
+                            <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-shopping-cart me-1"></i> Mua</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container py-4">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <a href="#"><img src="img/Banner4.png" alt="Banner 1" class="img-fluid rounded shadow-sm"></a>
+            </div>
+            <div class="col-md-6">
+                <a href="#"><img src="img/Banner4.png" alt="Banner 2" class="img-fluid rounded shadow-sm"></a>
+            </div>
+        </div>
+    </div>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h4>Sản phẩm mới nhất</h4>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action d-flex align-items-center mb-2">
+                            <img src="img/lichSuVanVat.png" alt="Latest 1" class="me-3 rounded" style="width: 50px;">
+                            <div>
+                                <h6 class="mb-0 text-dark">Lịch sử vạn vật</h6>
+                                <span class="text-danger fw-bold">100.000đ</span>
+                            </div>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action d-flex align-items-center mb-2">
+                            <img src="img/nguoiVeTuSaoHoa.png" alt="Latest 2" class="me-3 rounded" style="width: 50px;">
+                            <div>
+                                <h6 class="mb-0 text-dark">Người về từ sao hỏa</h6>
+                                <span class="text-danger fw-bold">100.000đ</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <h4>Sản phẩm được đánh giá cao</h4>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action d-flex align-items-center mb-2">
+                            <img src="img/nhaGiaKim.png" alt="Top Rated 1" class="me-3 rounded" style="width: 50px;">
+                            <div>
+                                <h6 class="mb-0 text-dark">Nhà giả kim</h6>
+                                <div class="small text-warning"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                <span class="text-danger fw-bold">100.000đ</span>
+                            </div>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action d-flex align-items-center mb-2">
+                            <img src="img/lichSu2.png" alt="Top Rated 2" class="me-3 rounded" style="width: 50px;">
+                            <div>
+                                <h6 class="mb-0 text-dark">Đại Việt sử kí toàn thư</h6>
+                                <div class="small text-warning"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                <span class="text-danger fw-bold">100.000đ</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <h4>Bài viết mới nhất</h4>
+                    <div class="list-group">
+                        <a href="blog-details.html" class="list-group-item list-group-item-action d-flex align-items-start mb-2">
+                            <img src="img/blog1.png" alt="Blog 1" class="me-3 rounded" style="width: 50px;">
+                            <div>
+                                <h6 class="mb-1 text-dark">5 Mẹo đọc sách hiệu quả</h6>
+                                <p class="small text-muted mb-0"><i class="fa fa-calendar me-1"></i> 4 Thg 5, 2019</p>
+                            </div>
+                        </a>
+                        <a href="blog-details2.html" class="list-group-item list-group-item-action d-flex align-items-start mb-2">
+                            <img src="img/blog2.png" alt="Blog 2" class="me-3 rounded" style="width: 50px;">
+                            <div>
+                                <h6 class="mb-1 text-dark">Những cuốn sách nên đọc</h6>
+                                <p class="small text-muted mb-0"><i class="fa fa-calendar me-1"></i> 4 Thg 5, 2019</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5 class="fw-bold">AURORA BOOKS</h5>
+                    <ul class="list-unstyled small">
+                        <li>Địa chỉ: 60-49 Road 11378 New York</li>
+                        <li>Điện thoại: +65 11.188.888</li>
+                        <li>Email: buyabook@aurora.com</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Liên kết hữu ich</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Về chúng tôi</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Chính sách bảo mật</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Thông tin giao hàng</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5>Đăng ký nhận bản tin</h5>
+                    <p class="small text-white-50">Nhận cập nhật E-mail về các ưu đãi đặc biệt và sách mới nhất của chúng tôi.</p>
+                    <form class="d-flex mb-3">
+                        <input type="email" class="form-control me-2" placeholder="Nhập email của bạn">
+                        <button type="submit" class="btn btn-warning">Đăng Ký</button>
+                    </form>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3 border-top pt-3">
+                <div class="col-12 text-center small">
+                    <p class="mb-0 text-white-50">Bản quyền &copy; <script>document.write(new Date().getFullYear());</script> Đã đăng ký bản quyền.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#book-filter-tabs .filter-btn').on('click', function(e) {
+                e.preventDefault(); 
+                var filterValue = $(this).data('filter');
+                $('#book-filter-tabs .filter-btn').removeClass('active');
+                $(this).addClass('active');
+                if (filterValue === 'all') {
+                    $('.single-book').show();
+                } else {
+                    $('.single-book').hide();
+                    $('.' + filterValue).show();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
